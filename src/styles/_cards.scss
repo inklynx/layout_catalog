@@ -1,0 +1,30 @@
+@use 'variables' as *;
+
+.cards {
+  max-width: 1200px;
+  gap: 46px 48px;
+  padding: 50px 40px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: $card-width;
+  justify-content: center;
+  box-sizing: border-box;
+
+  @media (min-width: 488px) {
+    grid-template-columns: repeat(2, 200px);
+    justify-content: center;
+  }
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(3, 200px);
+    justify-content: center;
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(4, 200px);
+    justify-content: center;
+  }
+}
+
+// NOTE: This file manges the cards container layout (Grid)
+// Children: _card.scss components are placed inside this container
