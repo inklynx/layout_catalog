@@ -1,13 +1,22 @@
+// ===================================================
+// Main Stylesheet - Orchestrates all components
+// ===================================================
+
 @use 'header';
 @use 'stars';
 @use 'card';
 @use 'cards';
+
+// ---------------------------------------------------
+// Global styles
+// ---------------------------------------------------
 
 *,
 *::before,
 *::after {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html {
@@ -17,5 +26,4 @@ html {
 body {
   margin: 0;
   font-family: Roboto, sans-serif;
-  box-sizing: border-box;
 }

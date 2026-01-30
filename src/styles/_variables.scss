@@ -1,6 +1,26 @@
-$card-width: 200px;
+// ======================================================
+// VARIABLES - Global Design Tokens
+// ======================================================
+
+// --- COLORS ---
+
+// Primary
 $blue-primary: #00acdc;
+
+// Text
 $text-secondary-color: #616070;
 $text-accent-color: #060b35;
-$gray-accents: #f3f3f3;
+$text-hover-color: #34568b;
+
+// Backgrounds
 $bg: #fff;
+
+// Borders & Accents
+$gray-accents: #f3f3f3;
+
+// Shadows
+$black: #000;
+
+// --- SIZES ---
+
+$card-width: 200px;

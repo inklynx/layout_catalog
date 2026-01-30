@@ -8,7 +8,7 @@
   align-items: center;
   background-color: $bg;
   padding: 0 50px;
-  box-shadow: 0 2px 4px rgb(240, 240, 240);
+  box-shadow: 0 2px 4px rgba($black, $alpha: 0.05);
 
   &__list {
     display: flex;

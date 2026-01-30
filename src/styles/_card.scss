@@ -39,11 +39,6 @@
     transition:
       color 0.3s ease,
       transform 0.3s ease;
-
-    &:hover,
-    &:focus-visible {
-      color: #34568b;
-    }
   }
 
   &__code {
@@ -116,7 +111,12 @@
   &:focus-visible {
     transform: scale(1.2);
     z-index: 10;
-    box-shadow: 0 10px 25px rgba($color: #000, $alpha: 0.07);
+    box-shadow: 0 10px 25px rgba($black, $alpha: 0.07);
+  }
+
+  &:hover &__title,
+  &:focus-visible &__title {
+    color: $text-hover-color;
   }
 }
 
