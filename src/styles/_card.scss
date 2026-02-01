@@ -2,24 +2,21 @@
 
 .card {
   width: $card-width;
-  background: $bg;
+  background: $bg-card;
   display: flex;
   flex-direction: column;
-  box-sizing: border-box;
   border: 1px solid $gray-accents;
-  border-radius: 5px;
-  padding: 32px 16px 16px;
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+  border-radius: $border-radius-md;
+  padding: $spacing-8 $spacing-4 $spacing-4;
+  transition: transform $transition-duration $transition-timing;
 
   &__image {
-    width: 160px;
-    height: 134px;
+    width: $card-image-width;
+    height: $card-image-height;
     display: block;
-    margin: 0 auto 40px;
+    margin: 0 auto $spacing-10;
     object-fit: cover;
-    border-radius: 5px;
+    border-radius: $border-radius-md;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -31,20 +28,18 @@
   }
 
   &__title {
-    margin: 0 0 4px;
-    font-size: 12px;
-    font-weight: 500;
-    line-height: 18px;
+    margin: 0 0 $spacing-base;
+    font-size: $font-size-medium;
+    font-weight: $font-weight-medium;
+    line-height: $line-height-medium;
     color: $text-accent-color;
-    transition:
-      color 0.3s ease,
-      transform 0.3s ease;
+    transition: color $transition-duration $transition-timing;
   }
 
   &__code {
-    margin-bottom: 16px;
-    font-size: 10px;
-    font-weight: 400;
+    margin-bottom: $spacing-4;
+    font-size: $font-size-small;
+    font-weight: $font-weight-normal;
     color: $text-secondary-color;
   }
 
@@ -52,32 +47,32 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 24px;
+    margin-bottom: $spacing-6;
   }
 
   &__review-count {
     color: $text-accent-color;
-    font-size: 10px;
-    font-weight: 400;
+    font-size: $font-size-small;
+    font-weight: $font-weight-normal;
   }
 
   &__price-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 16px;
+    margin-bottom: $spacing-4;
   }
 
   &__price-label {
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 18px;
+    font-size: $font-size-medium;
+    font-weight: $font-weight-normal;
+    line-height: $line-height-medium;
     color: $text-secondary-color;
   }
 
   &__price-value {
-    font-size: 16px;
-    font-weight: bold;
+    font-size: $font-size-xlarge;
+    font-weight: $font-weight-bold;
     color: $text-accent-color;
   }
 
@@ -85,23 +80,22 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 40px;
-    box-sizing: border-box;
+    height: $card-btn-height;
     background-color: $blue-primary;
-    border-radius: 5px;
+    border-radius: $border-radius-md;
     border: 1px solid $blue-primary;
     color: $bg;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 16px;
+    font-weight: $font-weight-bold;
+    font-size: $font-size-large;
+    line-height: $line-height-medium-tight;
     text-transform: uppercase;
     text-decoration: none;
     outline: none;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all $transition-duration $transition-timing;
 
     &:hover {
-      background-color: $bg;
+      background-color: $bg-btn-hover;
       color: $blue-primary;
       border: 1px solid $blue-primary;
     }
@@ -109,9 +103,9 @@
 
   &:hover,
   &:focus-visible {
-    transform: scale(1.2);
+    transform: scale($card-scale);
     z-index: 10;
-    box-shadow: 0 10px 25px rgba($black, $alpha: 0.07);
+    box-shadow: 0 10px $spacing-6 $shadow-hover;
   }
 
   &:hover &__title,
